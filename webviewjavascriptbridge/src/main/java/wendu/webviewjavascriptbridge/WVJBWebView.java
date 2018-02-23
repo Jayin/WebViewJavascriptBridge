@@ -16,7 +16,6 @@ import android.support.annotation.Keep;
 import android.support.v7.app.AlertDialog;
 import android.util.AttributeSet;
 import android.view.Gravity;
-import android.view.InputEvent;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -983,17 +982,6 @@ public class WVJBWebView extends WebView {
                 webViewClient.onUnhandledKeyEvent(view, event);
             } else {
                 super.onUnhandledKeyEvent(view, event);
-            }
-
-        }
-
-        @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-        @Override
-        public void onUnhandledInputEvent(WebView view, InputEvent event) {
-            if (webViewClient != null) {
-                webViewClient.onUnhandledInputEvent(view, event);
-            } else {
-                super.onUnhandledInputEvent(view, event);
             }
 
         }

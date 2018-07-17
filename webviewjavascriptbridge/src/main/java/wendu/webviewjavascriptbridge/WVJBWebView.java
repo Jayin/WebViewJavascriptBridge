@@ -343,6 +343,8 @@ public class WVJBWebView extends WebView {
         settings.setSupportMultipleWindows(true);
         settings.setAppCachePath(APP_CACHE_DIRNAME);
         settings.setUseWideViewPort(true);
+        String ua = settings.getUserAgentString();
+        this.getSettings().setUserAgentString(ua + " WebViewJsBridge/1.0");
         super.setWebChromeClient(mWebChromeClient);
         super.setWebViewClient(mWebViewClient);
 
